@@ -2,3 +2,5 @@
 /.pytest_cache
 /virtualEnvPy
 bubblesort.cpp
+chromedriver_linux64.zip
+selenium-server.jar

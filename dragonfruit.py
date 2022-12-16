@@ -1,23 +1,18 @@
-# Source of this file: https://github.com/AndyLPK247/behavior-driven-python/blob/master/cucumbers.py
+
 
 """
-runs with the original unmodifed test_unit_basic.py and unit_basic.feature files
-"""
-
-"""
-This module contains a simple class modeling a cucumber basket.
-Cucumbers may be added or removed from the basket.
-The basket has a maximum size, however.
+part of my software testing final was taking the cucumbers.py file, test_unit_basic.py, and unit_basic.feature file, and
+simplly change the the names of cucumber to dragonfruit, and basket to container
 """
 
 
-class CucumberBasket:
+class DragonFruitContainer:
 
     def __init__(self, initial_count=0, max_count=10):
         if initial_count < 0:
-            raise ValueError("Initial cucumber basket count must not be negative")
+            raise ValueError("Initial dragonfruit container count must not be negative")
         if max_count < 0:
-            raise ValueError("Max cucumber basket count must not be negative")
+            raise ValueError("Max dragonfruit container count must not be negative")
 
         self._count = initial_count
         self._max_count = max_count
@@ -41,11 +36,11 @@ class CucumberBasket:
     def add(self, count=1):
         new_count = self.count + count
         if new_count > self.max_count:
-            raise ValueError("Attempted to add too many cucumbers")
+            raise ValueError("Attempted to add too many dragonfruits")
         self._count = new_count
 
     def remove(self, count=1):
         new_count = self.count - count
         if new_count < 0:
-            raise ValueError("Attempted to remove too many cucumbers")
+            raise ValueError("Attempted to remove too many dragonfruits")
         self._count = new_count

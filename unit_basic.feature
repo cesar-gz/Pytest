@@ -1,7 +1,7 @@
-@unit @basket
-Feature: Cucumber Basket
+@unit @container
+Feature: Dragonfruit Container
   As a gardener,
-  I want to carry cucumbers in a basket,
+  I want to carry dragonfruits in a container,
   So that I don't drop them all.
 
   # Gherkin-based automation frameworks *can* be used for unit testing.
@@ -9,43 +9,43 @@ Feature: Cucumber Basket
   # This feature file does unit testing for the sake of illustrating Gherkin usage.
 
   @add
-  Scenario: Add cucumbers to a basket
-    Given the basket has "2" cucumbers
-    When "4" cucumbers are added to the basket
-    Then the basket contains "6" cucumbers
+  Scenario: Add dragonfruits to a container
+    Given the container has "2" dragonfruits
+    When "4" dragonfruits are added to the container
+    Then the container contains "6" dragonfruits
 
   @add @full
-  Scenario: Fill the basket with cucumbers
-    Given the basket is empty
-    When "10" cucumbers are added to the basket
-    Then the basket is full
+  Scenario: Fill the container with dragonfruits
+    Given the container is empty
+    When "10" dragonfruits are added to the container
+    Then the container is full
 
   @add @error
-  Scenario: Overfill the basket with cucumbers
-    Given the basket has "8" cucumbers
-    Then "3" cucumbers cannot be added to the basket
+  Scenario: Overfill the container with dragonfruits
+    Given the container has "8" dragonfruits
+    Then "3" dragonfruits cannot be added to the container
 
   @remove
-  Scenario: Remove cucumbers from the basket
-    Given the basket has "8" cucumbers
-    When "3" cucumbers are removed from the basket
-    Then the basket contains "5" cucumbers
+  Scenario: Remove dragonfruits from the container
+    Given the container has "8" dragonfruits
+    When "3" dragonfruits are removed from the container
+    Then the container contains "5" dragonfruits
 
   @remove @empty
-  Scenario: Empty the basket of all cucumbers
-    Given the basket is full
-    When "10" cucumbers are removed from the basket
-    Then the basket is empty
+  Scenario: Empty the container of all dragonfruits
+    Given the container is full
+    When "10" dragonfruits are removed from the container
+    Then the container is empty
 
   @remove @error
-  Scenario: Remove too many cucumbers from the basket
-    Given the basket has "1" cucumber
-    Then "2" cucumbers cannot be removed from the basket
+  Scenario: Remove too many dragonfruits from the container
+    Given the container has "1" dragonfruit
+    Then "2" dragonfruits cannot be removed from the container
 
   @add @remove
-  Scenario: Add and remove cucumbers
-    Given the basket is empty
-    When "4" cucumbers are added to the basket
-    And "6" more cucumbers are added to the basket
-    But "3" cucumbers are removed from the basket
-    Then the basket contains "7" cucumbers
+  Scenario: Add and remove dragonfruits
+    Given the container is empty
+    When "4" dragonfruits are added to the container
+    And "6" more dragonfruits are added to the container
+    But "3" dragonfruits are removed from the container
+    Then the container contains "7" dragonfruits
